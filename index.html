@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Succionabolas</title>
+    <link rel="stylesheet" href="./index.css">
+    <!--<link rel="icon" href="images/ico.png" type="image/x-icon">-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/flipdown/dist/flipdown.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <!-- Incluir el script de FlipDown -->
+    <script src="node_modules/flipdown/dist/flipdown.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  
+	 <video id="fondo-animado" muted loop>
+        <!-- Puedes proporcionar un video de respaldo en caso de que el formato no sea compatible -->
+        <source src="fallback_video.mp4" type="video/mp4">
+        Tu navegador no admite el elemento de video.
+    </video>
+	
+	<!-- Audios -->
+	<audio id="pozo" src="audio/pozo.mp3"></audio>
+	<audio id="paton" src="audio/paton.mp3"></audio>
+	<audio id="paniagua" src="audio/paniagua.mp3"></audio>
+	<audio id="ucar" src="audio/ucar.mp3"></audio>
+	<audio id="comas" src="audio/comas.mp3"></audio>
+	<audio id="luming" src="audio/luming.mp3"></audio>
+	<audio id="luis" src="audio/luis.mp3"></audio>
+	<audio id="0" src="audio/1.mp3"></audio>
+	<audio id="1" src="audio/2.mp3"></audio>
+	<audio id="2" src="audio/3.mp3"></audio>
+	<audio id="3" src="audio/4.mp3"></audio>
+	<audio id="4" src="audio/5.mp3"></audio>
+	<audio id="gref" src="audio/epica.mp3"></audio>
+	<audio id="gref2" src="audio/epica2.mp3"></audio>
+	<div class="centro">
+		<div class="textotitulo" id="textotitulo">
+			<h1 class="titulo" id="tituloa">Selecciona objetivo</h1>
+		</div>
+				<div class="textotitulo2" id="textotitulo2">
+					<h1 class="titulo2" id="titulo4"><h1>
+					<div id="cuadrad" class="cuadrado">
+					<img id="imagen" src=""></img>
+					</div>
+				</div>
+				
+				<div class="example" id="example">
+				  <div id="flipdown" class="flipdown"></div>
+				</div>
+				
+		<h1 class="insulto" id="insulto"></h1>
+		
+		
+		
+		<!-- Para video de fondo -->
+		 <img class="video-container" id="imagenPresentacion1" src="" alt="Presentación de Fotos Aleatorias"></img>
+		<img class="video-container" id="imagenPresentacion2" src="" alt="Presentación de Fotos Aleatorias"></img>
+		
+		<div id="content">
+		<canvas id="canvas"></canvas>
+		<audio id="audio"></audio>
+		</div>
+
+		<!-- Para grid con perfiles-->
+		<div class="grid-container" id="grid-container">
+		<div id="cuadrado1" class="cuadrado">
+		<img src="perfil/pozo.png"></img>
+		</div>
+		<div id="cuadrado2" class="cuadrado">
+		<img src="perfil/paton.png"></img>
+		</div>
+		<div id="cuadrado3" class="cuadrado">
+		<img src="perfil/úcar.png"></img>
+		</div>
+		<div id="cuadrado4" class="cuadrado">
+		<img src="perfil/comas.png"></img>
+		</div>
+		<div id="cuadrado5" class="cuadrado">
+		<img src="perfil/luis.png"></img>
+		</div>
+		<div id="cuadrado6" class="cuadrado">
+		<img src="perfil/luming.png"></img>
+		</div>
+		<div id="cuadrado7" class="cuadrado">
+		<img src="perfil/paniagua.png"></img>
+		</div>
+		<div id="cuadrado8" class="cuadrado">
+		<img src="perfil/visibilidad.png" height="90px" width="90px"></img>
+		</div>
+		</div>
+	</div>
+	<script src="index.js"></script>
+  </body>
+</html>

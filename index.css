@@ -1,0 +1,419 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  text-align: center;
+  flex-direction: column; /* Alinea los elementos en columna */
+  align-items: center;
+  overflow: hidden; /* Evita barras de desplazamiento */
+}
+
+.centro{
+	margin-top: 40px;
+	position: relative;
+}
+
+video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+			filter: blur(10px);
+			transform: scale(1.1)
+        }
+
+.textotitulo {
+  position: relative;
+  text-align: center;
+  margin-top: 0px;
+  
+}
+
+.textotitulo2 {
+  position: relative;
+  text-align: center;
+  top: 30px;
+  display: none;
+}
+
+
+.contenedor-titulo {
+  order: 1; /* Controla el orden en la dirección de la columna */
+}
+
+.rectangulo{
+	width: 500px;
+	display: none;
+	color: blue;
+	z-index: 999;
+	height: 800px;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.fondo{
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	display: none;
+}
+
+.example h1,
+.example p,
+.example .button {
+  transition: all .2s ease-in-out;
+}
+
+body.light-theme {
+  background-color: #151515;
+}
+
+body.light-theme .example h1 {
+  color: #FFFFFF;
+}
+
+body.light-theme .example p {
+  color: #FFFFFF;
+}
+
+body.light-theme .buttons .button {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+body.light-theme .buttons .button:hover {
+  color: #151515;
+  background-color: #FFFFFF;
+}
+
+.example {
+  display: none;
+  font-family: 'Roboto', sans-serif;
+  width: 550px;
+  height: 378px;
+  margin: 80px auto; /* Centrar verticalmente y horizontalmente */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center; /* Centrar el texto dentro del contenedor */
+}
+
+.insulto {
+  color: black;
+  font-weight: bold;
+  font-size: 3.5em;
+  width: 1000px;
+  margin-top: 250px;
+  height: 50px;
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar el contenido */
+  display: block;
+  opacity: 0;
+  position: fixed;
+  transition: opacity 1s ease-in-out;
+	animation: cambioColor 20s infinite alternate;  /* Cambiado a fixed para que se ajuste a la ventana */
+}
+
+
+@keyframes cambioColor {
+    0% {
+        color: #ff0000; /* Rojo */
+    }
+    25% {
+        color: #00ff00; /* Verde */
+    }
+    50% {
+        color: #0000ff; /* Azul */
+    }
+    75% {
+        color: #ff00ff; /* Magenta */
+    }
+    100% {
+        color: #ffff00; /* Amarillo */
+    }
+}
+
+
+.contenedor-rectangulo {
+  width: 500px;
+  height: 550px;
+  background-color: #3498db; /* Color de fondo del rectángulo */
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra: offsetX, offsetY, blurRadius, color */
+  padding: 20px; /* Espaciado interno */
+  display: none;
+}
+
+/* Estilo del contenido dentro del rectángulo */
+.contenido {
+  color: #fff; /* Color del texto */
+  font-size: 18px;
+}
+
+.example .flipdown {
+  height: 200px;
+  z-index: 99;
+}
+
+
+
+.example p {
+  text-align: center;
+  font-weight: 100;
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+.example .buttons {
+  width: 100%;
+  height: 50px;
+  margin: 50px auto 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.example .buttons p {
+  height: 50px;
+  line-height: 50px;
+  font-weight: 400;
+  padding: 0px 25px 0px 0px;
+  color: #333;
+  margin: 0px;
+}
+
+.example .button {
+  display: inline-block;
+  height: 50px;
+  box-sizing: border-box;
+  line-height: 46px;
+  text-decoration: none;
+  color: #333;
+  padding: 0px 20px;
+  border: solid 2px #333;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all .2s ease-in-out;
+}
+
+.example .button:hover {
+  background-color: #333;
+  color: #FFF;
+}
+
+.example .button i {
+  margin-right: 5px;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  grid-template-rows: repeat(2, 280px);
+  align-items: center;
+  visibility: visible;
+  max-width: 100%;
+  margin: 20px;
+  
+  order: 2; /* Controla el orden en la dirección de la columna */
+}
+
+
+
+.titulo{
+	font-family: 'Poppins',sans-serif;
+	color:white;
+	font-weight: bold;
+	font-size: 2.8em;
+	transition: color 1s ease; 
+}
+
+#thefile {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+}
+
+#canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+audio {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  width: calc(100% - 20px);
+}
+
+.titulo2{
+	font-family: 'Poppins',sans-serif;
+	color: white;
+	font-weight: bold;
+	font-size: 2.8em;
+	transition: color 1s ease; 
+	display: none;
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  scale: 1.1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Asegura que el video esté detrás del contenido */
+   filter: blur(5px); /* Aplica un desenfoque al fondo del contenedor */
+  -webkit-backdrop-filter: blur(5px);
+  animation: ;
+  
+}
+
+@keyframes fadeAnimation {
+      from {
+        opacity: 1; /* Inicia con opacidad 0 */
+      }
+
+      to {
+        opacity: 0; /* Termina con opacidad 1 */
+      }
+    }
+
+
+.contenido {
+  /* Estilos para el contenido que estará encima del video */
+  position: relative;
+  display: flex;
+  z-index: 1; /* Asegura que el contenido esté sobre el video */
+  color: #fff; /* Color del texto, puedes ajustarlo según tus necesidades */
+  padding: 20px;
+}
+
+.rectlogin{
+    height: 520px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+	visibility: hidden;
+}
+
+.fotoperfil{
+	display:block;
+	height: 90px;
+	margin: auto;
+	width: 90px;
+	border-radius: 20px;
+}
+
+
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+.tituloform{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+	margin-top: 40px;
+    font-weight: 500;
+	text-align: center;
+}
+
+.atras{
+	margin-top: 70px;
+}
+
+.atras:hover{
+	cursor: pointer;
+	color: blue;
+}
+
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 3px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: white;
+	padding: 0 10px;
+}
+
+button{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.cuadrado {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  display: flex;
+  flex-direction: column; /* Ajusta la dirección del flex container a columna */
+  justify-content: center;
+  align-items: center;
+  background-color: #3498db;
+  border-radius: 80px;
+  overflow: hidden; /* Asegura que la imagen no se desborde del cuadrado */
+  transition: transform 0.1s;
+}
+
+.cuadrado img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 80px; /* Ajusta el radio de la imagen para que coincida con el cuadrado */
+  display: block;
+  margin: auto;
+  object-fit: cover; /* Ajusta la forma en que la imagen se ajusta dentro del contenedor */
+}
+
+
+
+.cuadrado:hover {
+	  cursor: pointer;
+	  transform: scale(1.07);
+    }
+
+    .cuadrado:not(:hover) {
+      filter: brightness(0.8); /* Reduce el brillo cuando no está en hover */
+    }
+
