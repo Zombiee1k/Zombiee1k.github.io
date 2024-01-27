@@ -217,7 +217,7 @@ function empezartimer(nombre){
 
         function getRandomTime() {
             // Generar un número aleatorio entre 35 y 60 segundos
-            return Math.floor(Math.random() * (60 - 35 + 1)) + 35;
+            return Math.floor(Math.random() * (30 - 15 + 1)) + 15;
         }
 
         // Obtener un tiempo aleatorio y sumarlo al tiempo actual
